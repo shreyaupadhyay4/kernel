@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AegisKernel
 
 AegisKernel is a local defensive security prototype for collecting and
@@ -132,3 +133,6 @@ finding and its mitigation.
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
+=======
+# kernel
+>>>>>>> 6aab61fec0942b54ac2f89305d5c88c37f61504d
