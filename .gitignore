@@ -1,0 +1,25 @@
+# Python environments, bytecode, and test caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+
+# Rust build output
+target/
+**/target/
+
+# Local telemetry can contain hostnames, paths, process IDs, and network data
+*.jsonl
+!agent/attack_test.jsonl
+!tests/empty.jsonl
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+
+# Local environment settings and credentials
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,5 @@
+kafka-python==2.0.2
+neo4j==5.14.1
+langgraph
+langchain-community
+pydantic

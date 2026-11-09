@@ -1,0 +1,5 @@
+tracepoint:syscalls:sys_enter_execve
+{
+  printf("{\"ts\":%llu,\"pid\":%d,\"ppid\":%d,\"uid\":%d,\"comm\":\"%s\",\"file\":\"%s\"}\n",
+         nsecs, pid, curtask->real_parent->tgid, uid, comm, str(args->filename));
+}

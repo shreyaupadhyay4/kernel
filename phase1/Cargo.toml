@@ -1,0 +1,4 @@
+[workspace]
+members = ["ingest"]
+exclude = ["ebpf"]
+resolver = "2"

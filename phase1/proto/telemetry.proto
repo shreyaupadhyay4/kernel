@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package aegis.telemetry.v1;
+
+enum EventType {
+  EVENT_TYPE_UNSPECIFIED = 0;
+  PROCESS_EXEC = 1;
+  NETWORK_CONNECT = 2;
+  FILE_OPEN = 3;
+}
+
+message TelemetryEvent {
+  uint64 timestamp_ns = 1;
+  uint32 pid = 2;
+  uint32 ppid = 3;
+  uint32 uid = 4;
+  string comm = 5;
+  EventType event_type = 6;
+  string executable = 7;
+  string path = 8;
+  string destination_ip = 9;
+  uint32 destination_port = 10;
+  bool attempted = 11;
+}
+
+message IngestAck {
+  bool accepted = 1;
+}
+
+service TelemetryIngest {
+  rpc PublishEvent(TelemetryEvent) returns (IngestAck);
+}

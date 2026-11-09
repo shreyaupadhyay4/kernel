@@ -1,0 +1,4 @@
+tracepoint:syscalls:sys_enter_connect
+{
+  printf("{\"ts\":%llu,\"type\":\"connect\",\"pid\":%d,\"comm\":\"%s\"}\n", nsecs, pid, comm);
+}
